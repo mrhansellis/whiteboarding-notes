@@ -1,0 +1,21 @@
+//turn strings into URL's. Given a string "Jasmine anne jones". Replace the spaces with "%20". May not use //the replace() method. If possible solve witn or without recursion. Take input as-is, no validation.
+//Input: "Jasmine Anne Jones"
+//Output: "Jasmine%20Anne%20Jones"
+
+const percentTwenty = (userInput) => {
+	const userArray = userInput.split(" ");
+	const analyze = userArray.join("%20");
+	return analyze;
+}
+
+const rePercentTwenty = (userInput) => {
+	if (userInput === "") {
+	return "";
+}
+	if (userInput[0] === " ") {
+	return = "%20" + rePercentTwenty(userInput.slice(1));
+	} else {
+	return userInput[0] + rePercentTwenty(userInput.slice(1));
+}
+	
+	
